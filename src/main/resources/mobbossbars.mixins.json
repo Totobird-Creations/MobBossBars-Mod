@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.totobirdcreations.mobbossbars.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnderDragonFightMixin",
+    "EntityMixin",
+    "ServerBossBarMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
