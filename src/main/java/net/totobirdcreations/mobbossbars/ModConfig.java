@@ -57,10 +57,16 @@ public class ModConfig extends MidnightConfig {
         }
 
         public MobBossBar toMobBossBar(Text name) {
-            return (MobBossBar) new MobBossBar(name, this.colour, this.style)
-                    .setDarkenSky(this.darkenSky)
-                    .setDragonMusic(this.dragonMusic)
-                    .setThickenFog(this.thickenFog);
+            MobBossBar bar = new MobBossBar(name, DEFAULT.colour, DEFAULT.style);
+            this.applyToBossBar(bar);
+            return bar;
+        }
+        public void applyToBossBar(BossBar bar) {
+            bar.setColor       (this.colour      );
+            bar.setStyle       (this.style       );
+            bar.setDarkenSky   (this.darkenSky   );
+            bar.setDragonMusic (this.dragonMusic );
+            bar.setThickenFog  (this.thickenFog  );
         }
 
     }

@@ -5,4 +5,6 @@ public interface IServerBossBarMixin {
 
     void setIsDragonFight(boolean value);
 
+    void setIsRaid(boolean value);
+
 }

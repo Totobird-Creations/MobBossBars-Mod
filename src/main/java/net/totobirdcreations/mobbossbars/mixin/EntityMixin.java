@@ -8,6 +8,7 @@ import net.minecraft.text.Text;
 import net.totobirdcreations.mobbossbars.MobBossBar;
 import net.totobirdcreations.mobbossbars.ModConfig;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -19,11 +20,15 @@ import java.util.List;
 @Mixin(Entity.class)
 public class EntityMixin {
 
+    @Unique
     private final Entity self = (Entity)(Object) this;
 
+    @Unique
     private ModConfig.ModConfigMobBossBar mobBossBarConfig = null;
+    @Unique
     private MobBossBar                    mobBossBar       = null;
 
+    @Unique
     private void createMobBossBarIfNeeded() {
         if (this.mobBossBarConfig == null) {
             this.mobBossBarConfig = ModConfig.getModConfigMobBossBar(EntityType.getId(self.getType()));
@@ -34,6 +39,7 @@ public class EntityMixin {
     }
 
 
+    @Unique
     private boolean canOperate() {
         return this.mobBossBarConfig != null && this.mobBossBar != null && this.mobBossBarConfig.enabled;
     }
@@ -46,6 +52,7 @@ public class EntityMixin {
     }
 
 
+    @Unique
     private final List<ServerPlayerEntity> trackingPlayers = new ArrayList<>();
 
     @Inject(method = "onStartedTrackingBy", at = @At("RETURN"))
