@@ -1,19 +1,19 @@
 {
 	"schemaVersion": 1,
-	"id": "mobbossbars",
+	"id": "bettertotems",
 	"version": "${version}",
-	"name": "MobBossBars",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Better Totems",
+	"description": "Allows totems of undying to save players from the void, and when anywhere in the inventory.",
 	"authors": [
-		"Me!"
+		"Totobird Creations"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Totobird-Creations/MobBossBars-Mod",
+		"sources": "https://github.com/Totobird-Creations/MobBossBars-Mod",
+		"issues": "https://github.com/Totobird-Creations/MobBossBars-Mod/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/mobbossbars/icon.png",
-	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.totobirdcreations.mobbossbars.Mod"
@@ -22,7 +22,6 @@
 	"mixins": [
 		"mobbossbars.mixins.json"
 	],
-	"accessWidener": "mobbossbars.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.14.19",
 		"minecraft": "~1.19.4",
@@ -30,6 +29,5 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
 	}
 }
