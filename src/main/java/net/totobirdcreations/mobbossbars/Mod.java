@@ -4,6 +4,7 @@ import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.boss.BossBar;
+import net.minecraft.util.Identifier;
 import net.totobirdcreations.mobbossbars.predicate.AngerableBossBarPredicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,8 @@ import org.slf4j.LoggerFactory;
 public class Mod implements ModInitializer {
     public static final String ID     = "mobbossbars";
     public static final Logger LOGGER = LoggerFactory.getLogger(ID);
+
+    public static final Identifier RAID_BAR_ID = new Identifier(ID, "raid");
 
     @Override
     public void onInitialize() {
@@ -25,6 +28,7 @@ public class Mod implements ModInitializer {
         ModConfig.bossBars.put(EntityType.getId(EntityType. WITHER         ).toString(), new ModConfig.ModConfigMobBossBar(true  , BossBar.Color. PURPLE , BossBar.Style. PROGRESS   , true, false, false ));
         ModConfig.bossBars.put(EntityType.getId(EntityType. IRON_GOLEM     ).toString(), new ModConfig.ModConfigMobBossBar(false , BossBar.Color. WHITE  , BossBar.Style. NOTCHED_12 ));
         ModConfig.bossBars.put(EntityType.getId(EntityType. ELDER_GUARDIAN ).toString(), new ModConfig.ModConfigMobBossBar(false , BossBar.Color. WHITE  , BossBar.Style. PROGRESS   ));
+        ModConfig.bossBars.put(RAID_BAR_ID                                  .toString(), new ModConfig.ModConfigMobBossBar(true  , BossBar.Color. RED    , BossBar.Style. NOTCHED_10 ));
         MidnightConfig.init(ID, ModConfig.class);
 
         // Register default predicates.

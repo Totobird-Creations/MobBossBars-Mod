@@ -1,2 +1,5 @@
 accessWidener v1 named
 accessible field net/minecraft/entity/boss/dragon/EnderDragonFight bossBar Lnet/minecraft/entity/boss/ServerBossBar;
+accessible field net/minecraft/village/raid/Raid EVENT_TEXT Lnet/minecraft/text/Text;
+accessible field net/minecraft/village/raid/Raid bar Lnet/minecraft/entity/boss/ServerBossBar;
+mutable field net/minecraft/village/raid/Raid bar Lnet/minecraft/entity/boss/ServerBossBar;
