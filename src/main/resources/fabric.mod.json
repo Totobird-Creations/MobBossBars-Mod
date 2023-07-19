@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "bettertotems",
+	"id": "mobbossbars",
 	"version": "${version}",
-	"name": "Better Totems",
-	"description": "Allows totems of undying to save players from the void, and when anywhere in the inventory.",
+	"name": "Mob Boss Bars",
+	"description": "Configurable boss bars for every entity type.",
 	"authors": [
 		"Totobird Creations"
 	],
